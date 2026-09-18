@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import { Outlet } from 'react-router';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
 
   return (
     <>
-      
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   )
 }

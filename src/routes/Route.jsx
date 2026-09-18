@@ -1,10 +1,23 @@
 import { createBrowserRouter } from "react-router";
+import App from "../App";
+import Home from "../pages/Home";
+import Movies from "../pages/Movies";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello World</div>,
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/movies",
+        element: <Movies />
+      }
+    ]
   },
 ]);
 
