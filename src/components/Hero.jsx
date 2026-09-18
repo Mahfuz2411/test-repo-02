@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden bg-gray-900 min-h-screen">
+    <section className="relative flex min-h-[calc(100svh-4rem)] items-center justify-center overflow-hidden bg-gray-900">
       <img
         src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba"
         alt="Movie theater"

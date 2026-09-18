@@ -1,6 +1,4 @@
-import { Link } from "react-router";
-
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, onDetails }) => {
   const image =
     movie.image?.medium ||
     "https://via.placeholder.com/210x295?text=No+Image";
@@ -33,6 +31,9 @@ const MovieCard = ({ movie }) => {
         </div>
 
         <button
+          type="button"
+          onClick={() => onDetails(movie)}
+          aria-label={`See details for ${movie.name}`}
           className="mt-auto block rounded-lg bg-yellow-400 py-2.5 text-center font-semibold text-gray-950 transition hover:bg-yellow-300 focus:outline-none focus:ring-0 focus:ring-yellow-300 focus:ring-offset-2 focus:ring-offset-gray-800 cursor-pointer"
         >
           See Details
